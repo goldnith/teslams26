@@ -8,6 +8,8 @@ Available brochure files:
 - `ampere-arena.pdf`
 - `paper-presentation.pdf`
 
+These PDFs are web-optimized copies for faster mobile opening while preserving every page and its text.
+
 Pending brochure file:
 
 - `robo-soccer.pdf`

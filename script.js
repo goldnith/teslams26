@@ -3,6 +3,7 @@ document.documentElement.classList.add("js");
 const REGISTRATION_URL = "https://docs.google.com/forms/d/e/1FAIpQLSdA5VgO-vaGfnEY8VvnAaKJ9NSaCRkGT28ylm56y9irdd6XBw/viewform?usp=header";
 const EVENT_DATE = "12 Sep 2026";
 const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+const compactEffects = window.matchMedia("(max-width: 860px), (hover: none), (pointer: coarse)");
 
 const events = [
   {
@@ -82,9 +83,10 @@ const events = [
     team: "Maximum 4",
     date: EVENT_DATE
   },
+
   {
     name: "Tooniverse",
-    poster: "assets/images/events/tooniverse.jpeg",
+    poster: "assets/images/optimized/events/tooniverse.webp",
     icon: "T",
     prize: "Details soon",
     fee: "See form",
@@ -95,27 +97,34 @@ const events = [
 ];
 
 const people = [
-  { name: "S.Abdul Rahaman", title: "President", group: "Management", image: "assets/images/students/S.Abdul Rahaman.jpeg" },
-  { name: "M.Mohammed Umar", title: "Secretary", group: "Management", image: "assets/images/students/M.Mohammed_Umar.jpg" },
-  { name: "M.Mohammed", title: "Treasurer", group: "Management", image: "assets/images/students/M.Mohamed.jpeg" },
-  { name: "Ajitha R", title: "Joint Treasurer ", group: "Management", image: "assets/images/students/Ajitha R.jpeg" },
-  { name: "Syed Adnan hussain", title: "Event coordinator ", group: "Robo soccer ", image: "assets/images/students/Syed Adnan hussain.jpg" },
-  { name: "Mohamed Jasim", title: "Event coordinator ", group: "Robo soccer ", image: "assets/images/students/Mohamed Jasim.jpeg" },
-  { name: "Mohammed asif N", title: "Event coordinator ", group: "Robo soccer ", image: "assets/images/students/Mohammed asif N.jpeg" },
-  { name: "Nathim", title: "Event coordinator ", group: "Ampere arena ", image: "assets/images/students/Nathim.jpeg" },
-  { name: "Anas.s", title: "Event coordinator ", group: "Ampere arena ", image: "assets/images/students/Anas.s.jpeg" },
-  { name: "Naveen", title: "Event coordinator ", group: "Ampere arena ", image: "assets/images/students/Naveen.jpeg" },
-  { name: "M.Mohammed Sharuk Khan", title: "Event coordinator ", group: "Paper presentation ", image: "assets/images/students/M.Mohammed_Sharuk_Khan.jpg" },
-  { name: "Mohamed Sheik Barvees", title: "Event coordinator ", group: "Paper presentation ", image: "assets/images/students/Mohamed Sheik Barvees.jpeg" },
+  { name: "S.Abdul Rahaman", title: "President", group: "Management", image: "assets/images/optimized/students/current/s-abdul-rahaman.webp" },
+  { name: "M.Mohammed Umar", title: "Secretary", group: "Management", image: "assets/images/optimized/students/current/m-mohammed-umar.webp" },
+  { name: "M.Mohammed", title: "Treasurer", group: "Management", image: "assets/images/optimized/students/current/m-mohammed.webp" },
+  { name: "Ajitha R", title: "Joint Treasurer", group: "Management", image: "assets/images/optimized/students/current/ajitha-r.webp" },
+  { name: "Syed Adnan Hussain", title: "Event Coordinator", group: "Robo Soccer", image: "assets/images/optimized/students/current/syed-adnan-hussain.webp" },
+  { name: "Mohamed Jasim", title: "Event Coordinator", group: "Robo Soccer", image: "assets/images/optimized/students/current/mohamed-jasim.webp" },
+  { name: "Mohammed Asif N", title: "Event Coordinator", group: "Robo Soccer", image: "assets/images/optimized/students/current/mohammed-asif-n.webp" },
+  { name: "Nathim", title: "Event Coordinator", group: "Ampere Arena", image: "assets/images/optimized/students/current/nathim.webp" },
+  { name: "Anas S", title: "Event Coordinator", group: "Ampere Arena", image: "assets/images/optimized/students/current/anas-s.webp" },
+  { name: "Naveen", title: "Event Coordinator", group: "Ampere Arena", image: "assets/images/optimized/students/current/naveen.webp" },
+  { name: "M.Mohammed Sharuk Khan", title: "Event Coordinator", group: "Paper Presentation", image: "assets/images/optimized/students/current/m-mohammed-sharuk-khan.webp" },
+  { name: "Mohamed Sheik Barvees", title: "Event Coordinator", group: "Paper Presentation", image: "assets/images/optimized/students/current/mohamed-sheik-barvees.webp" }
 ];
 
+// Add support-committee students here when their names and photos are ready.
+// Example: { name: "Student Name", role: "Team Member", image: "assets/images/support/media/student-name.webp" }
+const supportTeamMembers = {
+  media: [],
+  snacks: []
+};
+
 document.querySelectorAll("[data-register]").forEach((link) => {
-  link.href = REGISTRATION_URL;                                           
+  link.href = REGISTRATION_URL;
 });
 
 const eventGrid = document.getElementById("eventGrid");
 eventGrid.innerHTML = events.map((event, index) => `
-  <article class="flip-card reveal" tabindex="0" aria-label="${event.name}. Activate to view event details" style="transition-delay:${Math.min(index * 55, 220)}ms">
+  <article class="flip-card reveal" tabindex="0" aria-expanded="false" aria-label="${event.name}. Activate to view event details" style="transition-delay:${Math.min(index * 55, 220)}ms">
     <div class="flip-card-inner">
       <div class="flip-front">
         <img src="${event.poster}" alt="${event.name} event poster" width="720" height="1000" loading="lazy" decoding="async">
@@ -146,6 +155,27 @@ eventGrid.innerHTML = events.map((event, index) => `
 
 const peopleGrid = document.getElementById("peopleGrid");
 let revealObserver = null;
+
+document.querySelectorAll("[data-support-members]").forEach((grid) => {
+  const members = supportTeamMembers[grid.dataset.supportMembers] || [];
+  grid.innerHTML = members.length ? members.map((member, index) => `
+    <article class="support-member-card" style="--member-delay:${Math.min(index * 65, 260)}ms">
+      <img src="${member.image}" alt="${member.name}" width="360" height="440" loading="lazy" decoding="async">
+      <div>
+        <h5 title="${member.name}">${member.name}</h5>
+        <p>${member.role || "Team Member"}</p>
+      </div>
+    </article>
+  `).join("") : `
+    <div class="support-member-empty">
+      <span aria-hidden="true">+</span>
+      <div>
+        <strong>Student team</strong>
+        <p>Member photos will be added soon.</p>
+      </div>
+    </div>
+  `;
+});
 
 function observePersonCards() {
   const cards = peopleGrid.querySelectorAll(".person-card");
@@ -201,40 +231,61 @@ document.querySelectorAll(".brochure-button").forEach((button) => {
 });
 
 const touchInterface = window.matchMedia("(hover: none), (pointer: coarse)");
-document.querySelectorAll(".flip-card").forEach((card) => {
+const eventCards = [...document.querySelectorAll(".flip-card")];
+
+function setCardFlipped(card, flipped) {
+  card.classList.toggle("flipped", flipped);
+  card.setAttribute("aria-expanded", String(flipped));
+}
+
+eventCards.forEach((card) => {
   card.addEventListener("click", (event) => {
     if (event.target.closest("a, button")) return;
-    if (touchInterface.matches) card.classList.toggle("flipped");
+    if (touchInterface.matches) {
+      const open = !card.classList.contains("flipped");
+      eventCards.forEach((item) => setCardFlipped(item, item === card && open));
+    }
   });
 
   card.addEventListener("keydown", (event) => {
     if (event.key === "Enter" || event.key === " ") {
       event.preventDefault();
-      card.classList.toggle("flipped");
+      const open = !card.classList.contains("flipped");
+      eventCards.forEach((item) => setCardFlipped(item, item === card && open));
     }
   });
 });
 
 const heroGrid = document.getElementById("heroGrid");
-const gridColumns = 18;
-const gridRows = 14;
+const interactiveGrid = window.matchMedia("(hover: hover) and (pointer: fine) and (min-width: 861px)");
 const gridColors = ["#56d9e9", "#8e7ee8", "#f0b233"];
-const gridFragment = document.createDocumentFragment();
-
-for (let index = 0; index < gridColumns * gridRows; index += 1) {
-  const cell = document.createElement("span");
-  cell.className = "grid-cell";
-  cell.dataset.index = String(index);
-  cell.style.setProperty("--cell-color", gridColors[(Math.floor(index / gridColumns) + index) % gridColors.length]);
-  gridFragment.appendChild(cell);
-}
-heroGrid.appendChild(gridFragment);
-
+const gridColumns = 18;
 let litCells = [];
+
+function buildHeroGrid() {
+  clearLitCells();
+  heroGrid.replaceChildren();
+  if (!interactiveGrid.matches || prefersReducedMotion.matches) return;
+
+  const gridFragment = document.createDocumentFragment();
+  for (let index = 0; index < gridColumns * 14; index += 1) {
+    const cell = document.createElement("span");
+    cell.className = "grid-cell";
+    cell.dataset.index = String(index);
+    cell.style.setProperty("--cell-color", gridColors[(Math.floor(index / gridColumns) + index) % gridColors.length]);
+    gridFragment.appendChild(cell);
+  }
+  heroGrid.appendChild(gridFragment);
+}
+
 function clearLitCells() {
   litCells.forEach((cell) => cell?.classList.remove("lit"));
   litCells = [];
 }
+
+buildHeroGrid();
+interactiveGrid.addEventListener?.("change", buildHeroGrid);
+prefersReducedMotion.addEventListener?.("change", buildHeroGrid);
 
 heroGrid.addEventListener("pointerover", (event) => {
   const cell = event.target.closest(".grid-cell");
@@ -257,8 +308,9 @@ heroGrid.addEventListener("pointerleave", () => {
 const heroSparks = document.getElementById("heroSparks");
 const sparkPalette = ["#59d9e9", "#f2b532", "#f13992", "#b5a9ff"];
 const sparkFragment = document.createDocumentFragment();
+const sparkCount = prefersReducedMotion.matches ? 0 : (compactEffects.matches ? 12 : 24);
 
-for (let index = 0; index < 24; index += 1) {
+for (let index = 0; index < sparkCount; index += 1) {
   const spark = document.createElement("span");
   spark.style.setProperty("--spark-x", `${8 + Math.random() * 88}%`);
   spark.style.setProperty("--spark-y", `${8 + Math.random() * 84}%`);
@@ -281,6 +333,14 @@ const navIndicator = document.getElementById("navIndicator");
 let headerCompact = null;
 let resizeFrame = 0;
 let scrollFrame = 0;
+let headerSettleTimer = 0;
+let scrollRange = 1;
+let heroHeight = hero.offsetHeight;
+
+function refreshScrollMetrics() {
+  scrollRange = Math.max(document.documentElement.scrollHeight - window.innerHeight, 1);
+  heroHeight = hero.offsetHeight;
+}
 
 function positionNavIndicator(link = document.querySelector(".nav-link.active")) {
   if (!link || window.innerWidth <= 860) return;
@@ -317,6 +377,7 @@ window.addEventListener("resize", () => {
   if (resizeFrame) return;
   resizeFrame = window.requestAnimationFrame(() => {
     if (window.innerWidth > 860) closeMenu();
+    refreshScrollMetrics();
     positionNavIndicator();
     updateScrollUI();
     resizeFrame = 0;
@@ -326,17 +387,24 @@ window.addEventListener("resize", () => {
 function updateScrollUI() {
   scrollFrame = 0;
   const scrollTop = window.scrollY;
-  const scrollRange = Math.max(document.documentElement.scrollHeight - window.innerHeight, 1);
-  const compact = scrollTop > 100;
-  siteHeader.classList.toggle("scrolled", compact);
+  const mobileHeader = window.innerWidth <= 860;
+  const compactAt = mobileHeader ? 72 : 112;
+  const expandAt = mobileHeader ? 34 : 64;
+  const compact = headerCompact === true ? scrollTop > expandAt : scrollTop > compactAt;
   backToTop.classList.toggle("show", scrollTop > 640);
   scrollProgress.style.transform = `scaleX(${Math.min(scrollTop / scrollRange, 1)})`;
-  if (!prefersReducedMotion.matches && scrollTop < hero.offsetHeight * 1.1) {
+  if (!prefersReducedMotion.matches && scrollTop < heroHeight * 1.1) {
     hero.style.setProperty("--hero-shift", `${Math.min(scrollTop * .045, 34)}px`);
   }
   if (compact !== headerCompact) {
     headerCompact = compact;
-    window.requestAnimationFrame(() => positionNavIndicator());
+    siteHeader.classList.toggle("scrolled", compact);
+    siteHeader.classList.add("is-transitioning");
+    window.clearTimeout(headerSettleTimer);
+    headerSettleTimer = window.setTimeout(() => {
+      siteHeader.classList.remove("is-transitioning");
+      positionNavIndicator();
+    }, prefersReducedMotion.matches ? 0 : 820);
   }
 }
 
@@ -345,6 +413,11 @@ function scheduleScrollUI() {
 }
 
 window.addEventListener("scroll", scheduleScrollUI, { passive: true });
+window.addEventListener("load", () => {
+  refreshScrollMetrics();
+  updateScrollUI();
+}, { once: true });
+refreshScrollMetrics();
 updateScrollUI();
 backToTop.addEventListener("click", () => {
   window.scrollTo({ top: 0, behavior: prefersReducedMotion.matches ? "auto" : "smooth" });
@@ -397,8 +470,9 @@ const contactCard = document.querySelector(".contact-card");
 const contactParticles = document.getElementById("contactParticles");
 const particlePalette = ["#f13693", "#7869dd", "#e9a900"];
 const particleFragment = document.createDocumentFragment();
+const particleCount = prefersReducedMotion.matches ? 0 : (compactEffects.matches ? 12 : 28);
 
-for (let index = 0; index < 28; index += 1) {
+for (let index = 0; index < particleCount; index += 1) {
   const particle = document.createElement("span");
   particle.style.setProperty("--particle-x", `${4 + Math.random() * 92}%`);
   particle.style.setProperty("--particle-y", `${4 + Math.random() * 38}%`);
@@ -450,12 +524,19 @@ contactForm.addEventListener("submit", (event) => {
   formStatus.classList.add("show");
   window.setTimeout(() => {
     submitButton.classList.remove("sending");
-    window.location.href = `mailto:amseeesymposium@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    window.location.href = `mailto:eeeteslams@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
   }, 220);
 });
 
 document.addEventListener("keydown", (event) => {
-  if (event.key === "Escape") closeMenu();
+  if (event.key === "Escape") {
+    closeMenu();
+    eventCards.forEach((card) => setCardFlipped(card, false));
+  }
+});
+
+document.addEventListener("visibilitychange", () => {
+  document.body.classList.toggle("effects-paused", document.hidden);
 });
 
 document.addEventListener("pointerdown", (event) => {
