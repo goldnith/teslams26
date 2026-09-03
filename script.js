@@ -14,7 +14,8 @@ const events = [
     venue: "EEE Department Ground",
     team: "Maximum 4",
     date: EVENT_DATE,
-    brochure: "assets/brochures/robo-race.pdf"
+    brochure: "assets/brochures/robo-race.pdf",
+    brochureReady: true
   },
   {
     name: "Robo Soccer",
@@ -36,7 +37,8 @@ const events = [
     venue: "Machine Lab",
     team: "Maximum 3",
     date: EVENT_DATE,
-    brochure: "assets/brochures/ampere-arena.pdf"
+    brochure: "assets/brochures/ampere-arena.pdf",
+    brochureReady: true
   },
   {
     name: "Paper Presentation",
@@ -47,7 +49,8 @@ const events = [
     venue: "Simulation Lab",
     team: "Maximum 4",
     date: EVENT_DATE,
-    brochure: "assets/brochures/paper-presentation.pdf"
+    brochure: "assets/brochures/paper-presentation.pdf",
+    brochureReady: true
   },
   {
     name: "Fun Finity",
@@ -145,7 +148,10 @@ eventGrid.innerHTML = events.map((event, index) => `
         </div>
         <div class="event-back-actions">
           <a href="${REGISTRATION_URL}" target="_blank" rel="noopener noreferrer" aria-label="Register for ${event.name} on Google Forms">Register Now <i aria-hidden="true">↗</i></a>
-          ${event.brochure ? `<button class="brochure-button" type="button" data-event="${event.name}" data-brochure="${event.brochure}" aria-label="${event.name} brochure coming soon">Brochure <i aria-hidden="true">↗</i></button>` : ""}
+          ${event.brochure ? (event.brochureReady
+            ? `<a class="brochure-link" href="${event.brochure}" target="_blank" rel="noopener noreferrer" aria-label="Open ${event.name} brochure PDF">Brochure <i aria-hidden="true">↗</i></a>`
+            : `<button class="brochure-button" type="button" data-event="${event.name}" data-brochure="${event.brochure}" aria-label="${event.name} brochure coming soon">Brochure <i aria-hidden="true">↗</i></button>`
+          ) : ""}
         </div>
       </div>
     </div>

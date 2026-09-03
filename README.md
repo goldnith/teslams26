@@ -24,6 +24,6 @@ All registration buttons open the official TESLAMS '26 Google Form in a new tab.
 
 The contact form prepares an email to `amseeesymposium@gmail.com`; the visitor must send that email from their email application.
 
-Brochure controls are reserved for Robo Race, Robo Soccer, Ampere Arena and Paper Presentation only. Their expected PDF filenames are documented in `assets/brochures/README.md`; until those files are supplied, the controls show a short “coming soon” message.
+Brochure controls are reserved for Robo Race, Robo Soccer, Ampere Arena and Paper Presentation only. Robo Race, Ampere Arena and Paper Presentation currently open their local PDFs; Robo Soccer continues to show a short “coming soon” message until its brochure is supplied. The filenames are documented in `assets/brochures/README.md`.
 
 This is an independently rebuilt front end. It does not contain the original site's private source code, backend, database, admin panel or deployment configuration.

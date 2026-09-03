@@ -2,11 +2,14 @@
 
 This folder is reserved for the four events that have brochures.
 
-Add the supplied PDF files with these exact names:
+Available brochure files:
 
 - `robo-race.pdf`
-- `robo-soccer.pdf`
 - `ampere-arena.pdf`
 - `paper-presentation.pdf`
+
+Pending brochure file:
+
+- `robo-soccer.pdf`
 
 The other events do not display a brochure control.
