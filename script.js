@@ -9,7 +9,7 @@ const events = [
     poster: "assets/images/events/roborace.jpg",
     icon: "R",
     prize: "₹10,000",
-    fee: "Free",
+    fee: "₹200",
     venue: "EEE Department Ground",
     team: "Maximum 4",
     date: "12 Sep 2026"
@@ -19,7 +19,7 @@ const events = [
     poster: "assets/images/events/robosoccer.jpg",
     icon: "S",
     prize: "₹10,000",
-    fee: "Free",
+    fee: "₹200",
     venue: "EEE Department Ground",
     team: "Maximum 4",
     date: "12 Sep 2026"
@@ -29,7 +29,7 @@ const events = [
     poster: "assets/images/events/amperearena.jpg",
     icon: "A",
     prize: "₹4,500",
-    fee: "Free",
+    fee: "₹100",
     venue: "Machine Lab",
     team: "Maximum 3",
     date: "12 Sep 2026"
@@ -39,51 +39,41 @@ const events = [
     poster: "assets/images/events/paperpresentation.jpg",
     icon: "P",
     prize: "₹4,500",
-    fee: "Free",
+    fee: "₹100",
     venue: "Simulation Lab",
     team: "Maximum 4",
     date: "12 Sep 2026"
   },
   {
-    name: "Brain Blast",
-    poster: "assets/images/events/brainblast.jpg",
-    icon: "B",
-    prize: "₹500",
+    name: "Fun Finity",
+    poster: "assets/images/events/funfinity.png",
+    icon: "F",
+    prize: "₹1,500",
     fee: "Free",
+    venue: "Third Floor",
+    team: "Maximum 4",
+    date: "12 Sep 2026"
+  },
+  {
+    name: "Cinematrix",
+    poster: "assets/images/events/cinematrix.png",
+    icon: "C",
+    prize: "₹1,500",
+    fee: "₹50",
     venue: "Robotics Lab",
     team: "Maximum 4",
-    date: "27 Sep 2026"
+    date: "12 Sep 2026"
   },
   {
-    name: "Cinema-X",
-    poster: "assets/images/events/cinemax.jpg",
-    icon: "C",
-    prize: "₹500",
-    fee: "Free",
-    venue: "Simulation Lab · 12–2 PM",
-    team: "Maximum 4",
-    date: "27 Sep 2026"
-  },
-  {
-    name: "Gesture Quest",
-    poster: "assets/images/events/gesturequest.jpg",
-    icon: "G",
-    prize: "₹500",
-    fee: "Free",
+    name: "Min Twix",
+    poster: "assets/images/events/mintwix.jpeg",
+    icon: "M",
+    prize: "₹1,500",
+    fee: "₹50",
     venue: "EEE Department · 2nd Floor",
     team: "Maximum 4",
-    date: "27 Sep 2026"
+    date: "12 Sep 2026"
   },
-  {
-    name: "Bit Battle",
-    poster: "assets/images/events/bitbattle.jpg",
-    icon: "B",
-    prize: "₹500",
-    fee: "Free",
-    venue: "Robotics Lab · 12–2 PM",
-    team: "Maximum 4",
-    date: "27 Sep 2026"
-  }
 ];
 
 const people = [
