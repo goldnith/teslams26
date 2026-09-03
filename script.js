@@ -83,29 +83,29 @@ const events = [
     date: EVENT_DATE
   },
   {
-    name: "Trust Me Bro",
-    poster: "assets/images/optimized/events/trust-me-bro.webp",
+    name: "Tooniverse",
+    poster: "assets/images/events/tooniverse.jpeg",
     icon: "T",
     prize: "Details soon",
     fee: "See form",
     venue: "AMSCE",
-    team: "See form",
+    team: "Maximum 4",
     date: EVENT_DATE
-  },
-  {}
+  }
 ];
 
 const people = [
-  { name: "S.Abdul Rahaman", title: "President", group: "Management", image: "assets/images/students/M.Mohamed.jpeg" },
-  { name: "M.Mohammed Umar", title: "Secretary", group: "Management", image: "assets/images/students/M.Mohammed Umar.HEIC" },
-  { name: "M.Mohammed", title: "Treasurer", group: "Management", image: "assets/images/students/S.Abdul Rahaman.jpeg" },
+  { name: "S.Abdul Rahaman", title: "President", group: "Management", image: "assets/images/students/S.Abdul Rahaman.jpeg" },
+  { name: "M.Mohammed Umar", title: "Secretary", group: "Management", image: "assets/images/students/M.Mohammed_Umar.jpg" },
+  { name: "M.Mohammed", title: "Treasurer", group: "Management", image: "assets/images/students/M.Mohamed.jpeg" },
+  { name: "Ajitha R", title: "Joint Treasurer ", group: "Management", image: "assets/images/students/Ajitha R.jpeg" },
   { name: "Syed Adnan hussain", title: "Event coordinator ", group: "Robo soccer ", image: "assets/images/students/Syed Adnan hussain.jpg" },
-  { name: "Mohamed Jasim", title: "Event coordinator ", group: "Robo soccer ", image: "assets/images/students/Mohamed Jasim.jpg" },
+  { name: "Mohamed Jasim", title: "Event coordinator ", group: "Robo soccer ", image: "assets/images/students/Mohamed Jasim.jpeg" },
   { name: "Mohammed asif N", title: "Event coordinator ", group: "Robo soccer ", image: "assets/images/students/Mohammed asif N.jpeg" },
   { name: "Nathim", title: "Event coordinator ", group: "Ampere arena ", image: "assets/images/students/Nathim.jpeg" },
   { name: "Anas.s", title: "Event coordinator ", group: "Ampere arena ", image: "assets/images/students/Anas.s.jpeg" },
   { name: "Naveen", title: "Event coordinator ", group: "Ampere arena ", image: "assets/images/students/Naveen.jpeg" },
-  { name: "M.Mohammed Sharuk Khan", title: "Event coordinator ", group: "Paper presentation ", image: "assets/images/students/M.Mohammed Sharuk Khan.jpeg" },
+  { name: "M.Mohammed Sharuk Khan", title: "Event coordinator ", group: "Paper presentation ", image: "assets/images/students/M.Mohammed_Sharuk_Khan.jpg" },
   { name: "Mohamed Sheik Barvees", title: "Event coordinator ", group: "Paper presentation ", image: "assets/images/students/Mohamed Sheik Barvees.jpeg" },
 ];
 
