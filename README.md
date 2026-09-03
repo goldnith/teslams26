@@ -4,7 +4,7 @@ This is a responsive HTML/CSS/JavaScript recreation of the TESLAMS symposium web
 
 ## Files
 - `index.html` – page structure and content
-- `style.css` – the white graph-paper/purple visual system, polished shine effects, responsive navigation and motion
+- `style.css` – the white graph-paper/purple visual system, layered glass surfaces, touch-friendly phone layouts, polished shine effects and fluid responsive navigation
 - `script.js` – interactive hero grid and sparks, event-card flips, committee filters, scroll progress, responsive floating navigation and animated contact interaction
 
 ## Run
@@ -22,7 +22,7 @@ The Google Form, Google Map and Instagram link still require an internet connect
 
 All registration buttons open the official TESLAMS '26 Google Form in a new tab. The shared URL is stored in the `REGISTRATION_URL` value near the top of `script.js`, with matching fallback links in `index.html`.
 
-The contact form prepares an email to `amseeesymposium@gmail.com`; the visitor must send that email from their email application.
+The contact form prepares an email to `eeeteslams@gmail.com`; the visitor must send that email from their email application.
 
 Brochure controls are reserved for Robo Race, Robo Soccer, Ampere Arena and Paper Presentation only. Robo Race, Ampere Arena and Paper Presentation currently open their local PDFs; Robo Soccer continues to show a short “coming soon” message until its brochure is supplied. The filenames are documented in `assets/brochures/README.md`.
 

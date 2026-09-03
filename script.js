@@ -92,39 +92,25 @@ const events = [
     team: "See form",
     date: EVENT_DATE
   },
+  {}
 ];
 
 const people = [
-  { name: "Fiaz Ahmed T", title: "President", group: "Management", image: "assets/images/optimized/students/president.webp" },
-  { name: "Abdul Basith", title: "Secretary", group: "Management", image: "assets/images/optimized/students/secretary.webp" },
-  { name: "Mohammed Zubair", title: "Joint Secretary", group: "Management", image: "assets/images/optimized/students/js.webp" },
-  { name: "Sharrupriya P V", title: "Treasurer", group: "Management", image: "assets/images/optimized/students/sharupriya.webp" },
-  { name: "Mohamed", title: "Treasurer", group: "Management", image: "assets/images/optimized/students/mohamed.webp" },
-  { name: "Mohamed Yusuf Ameen S", title: "Event Coordinator", group: "Robo Race", image: "assets/images/optimized/students/ameen.webp" },
-  { name: "Mohammed Umar", title: "Event Coordinator", group: "Robo Race", image: "assets/images/optimized/students/umar1.webp" },
-  { name: "Rifan al deen H", title: "Event Coordinator", group: "Robo Race", image: "assets/images/optimized/students/rifan.webp" },
-  { name: "Abdul Kareem N", title: "Event Coordinator", group: "Robo Soccer", image: "assets/images/optimized/students/kareem.webp" },
-  { name: "Al Redhwan", title: "Event Coordinator", group: "Robo Soccer", image: "assets/images/optimized/students/alredhwan.webp" },
-  { name: "Mohamed Farook S", title: "Event Coordinator", group: "Ampere Arena", image: "assets/images/optimized/students/farook.webp" },
-  { name: "Bala P", title: "Event Coordinator", group: "Ampere Arena", image: "assets/images/optimized/students/bala.webp" },
-  { name: "Nataraj", title: "Event Coordinator", group: "Ampere Arena", image: "assets/images/optimized/students/nataraj.webp" },
-  { name: "Sharrupriya P V", title: "Event Coordinator", group: "Paper Presentation", image: "assets/images/optimized/students/sharupriya.webp" },
-  { name: "S. Mohamad Nathim", title: "Event Coordinator", group: "Paper Presentation", image: "assets/images/optimized/students/nathim.webp" },
-  { name: "Mehaboo S", title: "Event Coordinator", group: "Paper Presentation", image: "assets/images/optimized/students/mehaboo.webp" },
-  { name: "Raguram P", title: "Event Coordinator", group: "Paper Presentation", image: "assets/images/optimized/students/raguram.webp" },
-  { name: "Meera S", title: "Event Coordinator", group: "Fun Finity", image: "assets/images/optimized/students/meera.webp" },
-  { name: "Aishwarya S", title: "Event Coordinator", group: "Fun Finity", image: "assets/images/optimized/students/aishwarya.webp" },
-  { name: "Monica PA", title: "Event Coordinator", group: "Fun Finity", image: "assets/images/optimized/students/monica.webp" },
-  { name: "Sikkandar Pasil G", title: "Event Coordinator", group: "Cinematrix", image: "assets/images/optimized/students/sikkandar.webp" },
-  { name: "Bala P", title: "Event Coordinator", group: "Cinematrix", image: "assets/images/optimized/students/bala.webp" },
-  { name: "Sadhik Ali S", title: "Event Coordinator", group: "Cinematrix", image: "assets/images/optimized/students/sadhikali.webp" },
-  { name: "Taufik Ahmed T M", title: "Event Coordinator", group: "Min Twix", image: "assets/images/optimized/students/taufik.webp" },
-  { name: "Abdur Razeeth H", title: "Event Coordinator", group: "Min Twix", image: "assets/images/optimized/students/razeeth.webp" },
-  { name: "Syed Adnan Hussain", title: "Event Coordinator", group: "Min Twix", image: "assets/images/optimized/students/syed.webp" }
+  { name: "S.Abdul Rahaman", title: "President", group: "Management", image: "assets/images/students/M.Mohamed.jpeg" },
+  { name: "M.Mohammed Umar", title: "Secretary", group: "Management", image: "assets/images/students/M.Mohammed Umar.HEIC" },
+  { name: "M.Mohammed", title: "Treasurer", group: "Management", image: "assets/images/students/S.Abdul Rahaman.jpeg" },
+  { name: "Syed Adnan hussain", title: "Event coordinator ", group: "Robo soccer ", image: "assets/images/students/Syed Adnan hussain.jpg" },
+  { name: "Mohamed Jasim", title: "Event coordinator ", group: "Robo soccer ", image: "assets/images/students/Mohamed Jasim.jpg" },
+  { name: "Mohammed asif N", title: "Event coordinator ", group: "Robo soccer ", image: "assets/images/students/Mohammed asif N.jpeg" },
+  { name: "Nathim", title: "Event coordinator ", group: "Ampere arena ", image: "assets/images/students/Nathim.jpeg" },
+  { name: "Anas.s", title: "Event coordinator ", group: "Ampere arena ", image: "assets/images/students/Anas.s.jpeg" },
+  { name: "Naveen", title: "Event coordinator ", group: "Ampere arena ", image: "assets/images/students/Naveen.jpeg" },
+  { name: "M.Mohammed Sharuk Khan", title: "Event coordinator ", group: "Paper presentation ", image: "assets/images/students/M.Mohammed Sharuk Khan.jpeg" },
+  { name: "Mohamed Sheik Barvees", title: "Event coordinator ", group: "Paper presentation ", image: "assets/images/students/Mohamed Sheik Barvees.jpeg" },
 ];
 
 document.querySelectorAll("[data-register]").forEach((link) => {
-  link.href = REGISTRATION_URL;
+  link.href = REGISTRATION_URL;                                           
 });
 
 const eventGrid = document.getElementById("eventGrid");
