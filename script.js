@@ -338,7 +338,7 @@ heroGrid.addEventListener("pointerleave", () => {
 const heroSparks = document.getElementById("heroSparks");
 const sparkPalette = ["#59d9e9", "#f2b532", "#f13992", "#b5a9ff"];
 const sparkFragment = document.createDocumentFragment();
-const sparkCount = prefersReducedMotion.matches ? 0 : (compactEffects.matches ? 12 : 24);
+const sparkCount = prefersReducedMotion.matches ? 0 : (compactEffects.matches ? 8 : 18);
 
 for (let index = 0; index < sparkCount; index += 1) {
   const spark = document.createElement("span");
@@ -346,8 +346,8 @@ for (let index = 0; index < sparkCount; index += 1) {
   spark.style.setProperty("--spark-y", `${8 + Math.random() * 84}%`);
   spark.style.setProperty("--spark-size", `${2 + Math.random() * 4}px`);
   spark.style.setProperty("--spark-color", sparkPalette[index % sparkPalette.length]);
-  spark.style.setProperty("--spark-delay", `${-Math.random() * 6}s`);
-  spark.style.setProperty("--spark-duration", `${3.5 + Math.random() * 4.5}s`);
+  spark.style.setProperty("--spark-delay", `${-Math.random() * 8}s`);
+  spark.style.setProperty("--spark-duration", `${5.2 + Math.random() * 5.4}s`);
   sparkFragment.appendChild(spark);
 }
 heroSparks.appendChild(sparkFragment);
@@ -445,7 +445,7 @@ function updateScrollUI() {
     headerSettleTimer = window.setTimeout(() => {
       siteHeader.classList.remove("is-transitioning");
       positionNavIndicator();
-    }, prefersReducedMotion.matches ? 0 : 820);
+    }, prefersReducedMotion.matches ? 0 : 1100);
   }
 }
 
@@ -511,7 +511,7 @@ const contactCard = document.querySelector(".contact-card");
 const contactParticles = document.getElementById("contactParticles");
 const particlePalette = ["#f13693", "#7869dd", "#e9a900"];
 const particleFragment = document.createDocumentFragment();
-const particleCount = prefersReducedMotion.matches ? 0 : (compactEffects.matches ? 12 : 28);
+const particleCount = prefersReducedMotion.matches ? 0 : (compactEffects.matches ? 8 : 20);
 
 for (let index = 0; index < particleCount; index += 1) {
   const particle = document.createElement("span");
@@ -519,8 +519,8 @@ for (let index = 0; index < particleCount; index += 1) {
   particle.style.setProperty("--particle-y", `${4 + Math.random() * 38}%`);
   particle.style.setProperty("--particle-size", `${1 + Math.random() * 2.5}px`);
   particle.style.setProperty("--particle-color", particlePalette[index % particlePalette.length]);
-  particle.style.setProperty("--particle-duration", `${2.8 + Math.random() * 4.2}s`);
-  particle.style.setProperty("--particle-delay", `${-Math.random() * 5}s`);
+  particle.style.setProperty("--particle-duration", `${4.4 + Math.random() * 5.2}s`);
+  particle.style.setProperty("--particle-delay", `${-Math.random() * 7}s`);
   particleFragment.appendChild(particle);
 }
 contactParticles.appendChild(particleFragment);
