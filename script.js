@@ -88,9 +88,9 @@ const events = [
     name: "Tooniverse",
     poster: "assets/images/optimized/events/tooniverse.webp",
     icon: "T",
-    prize: "Details soon",
-    fee: "See form",
-    venue: "AMSCE",
+    prize: "₹1,500",
+    fee: "₹50",
+    venue: "Third Floor",
     team: "Maximum 4",
     date: EVENT_DATE
   }
@@ -108,13 +108,26 @@ const people = [
   { name: "Anas S", title: "Event Coordinator", group: "Ampere Arena", image: "assets/images/optimized/students/current/anas-s.webp" },
   { name: "Naveen", title: "Event Coordinator", group: "Ampere Arena", image: "assets/images/optimized/students/current/naveen.webp" },
   { name: "M.Mohammed Sharuk Khan", title: "Event Coordinator", group: "Paper Presentation", image: "assets/images/optimized/students/current/m-mohammed-sharuk-khan.webp" },
-  { name: "Mohamed Sheik Barvees", title: "Event Coordinator", group: "Paper Presentation", image: "assets/images/optimized/students/current/mohamed-sheik-barvees.webp" }
+  { name: "Mohamed Sheik Barvees", title: "Event Coordinator", group: "Paper Presentation", image: "assets/images/optimized/students/current/mohamed-sheik-barvees.webp" },
+  { name: "Mohammed Zubair.MU", title: "Event Coordinator", group: "Robo Race", image: "assets/images/optimized/students/current/Mohammed Zubair.MU.webp" },
+  { name: "Umaar faaresh Y", title: "Event Coordinator", group: "Robo Race", image: "assets/images/optimized/students/current/Umaar_faaresh_Y.jpg" },
+  { name: "Ahamed Irfan", title: "Event Coordinator", group: "Robo Race", image: "assets/images/optimized/students/current/Ahamed Irfan.jpeg" },
+  { name: "Abdur Razeeth", title: "Event Coordinator", group: "Fun Finity", image: "assets/images/optimized/students/current/Abdur Razeeth.jpeg" },
+  { name: "Habeeb", title: "Event Coordinator", group: "Fun Finity", image: "assets/images/optimized/students/current/Habeeb.jpeg" },
+  { name: "Bala", title: "Event Coordinator", group: "Cinematrix", image: "assets/images/optimized/students/current/Bala.jpg" },
+  { name: "M.Sulthan", title: "Event Coordinator", group: "Cinematrix", image: "assets/images/optimized/students/current/M.Sulthan.jpg" },
+  { name: "Meera S", title: "Event Coordinator", group: "Cinematrix", image: "assets/images/optimized/students/current/Meera S.jpeg" },
+  { name: "Mohammed Wasim", title: "Event Coordinator", group: "Tooniverse", image: "assets/images/optimized/students/current/Mohammed wasim.jpg" },
+  { name: "Shaiek Fareedh Ahamed", title: "Event Coordinator", group: "Min Twix", image: "assets/images/optimized/students/current/Shaiek Fareedh Ahamed.jpeg" },
+  { name: "Jaaiz ahamed", title: "Event Coordinator", group: "Min Twix", image: "assets/images/optimized/students/current/Jaaiz ahamed.jpeg" }
 ];
 
 // Add support-committee students here when their names and photos are ready.
 // Example: { name: "Student Name", role: "Team Member", image: "assets/images/support/media/student-name.webp" }
 const supportTeamMembers = {
-  media: [],
+  media: [
+  
+  ],
   snacks: []
 };
 
