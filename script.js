@@ -126,9 +126,16 @@ const people = [
 // Example: { name: "Student Name", role: "Team Member", image: "assets/images/support/media/student-name.webp" }
 const supportTeamMembers = {
   media: [
-  
+    { name: "Rifan Al deen", role: "Media Team", image: "assets/images/support/Rifan Al deen.jpeg" },
+    { name: "Aatif", role: "Media Team", image: "assets/images/support/Aatif.PNG" },
+    { name: "Abdul maalik S", role: "Media Team", image: "assets/images/support/Abdul maalik S.jpeg" },
   ],
-  snacks: []
+  snacks: [
+    { name: "Al Reduvan", role: "Snacks Committee ", image: "assets/images/support/Al Reduvan.jpeg" },
+    { name: "Amaan Khan", role: "Snacks Committee ", image: "assets/images/support/Amaan Khan.jpeg" },
+    { name: "Wasim Akram A", role: "Snacks Committee ", image: "assets/images/support/Wasim Akram A.png" },
+    { name: "Aravindhan SR", role: "Snacks Committee ", image: "assets/images/support/Aravindhan SR.jpeg" },
+  ]
 };
 
 document.querySelectorAll("[data-register]").forEach((link) => {
