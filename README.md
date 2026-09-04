@@ -16,7 +16,7 @@ For best results with local development:
 3. Open `index.html`.
 
 ## Important
-The logo, robot, event posters and committee photography are stored locally under `assets/images/`. The live page uses lightweight WebP copies under `assets/images/optimized/` for faster loading and smoother scrolling, while the original uploaded images remain untouched in their original folders.
+The logo, robot, event posters and committee photography are stored locally under `assets/images/`. The live page uses lightweight WebP copies under `assets/images/optimized/` for faster loading and smoother scrolling. The downloadable build omits redundant high-resolution copies that are not used by the page.
 
 Mobile and touch devices automatically use fewer decorative particles and a CSS-only hero grid. Background-tab animations pause automatically. The full interactive grid remains enabled on desktop devices with a fine pointer.
 
@@ -26,8 +26,8 @@ All registration buttons open the official TESLAMS '26 Google Form in a new tab.
 
 The contact form prepares an email to `eeeteslams@gmail.com`; the visitor must send that email from their email application.
 
-Brochure controls are reserved for Robo Race, Robo Soccer, Ampere Arena and Paper Presentation only. Robo Race, Ampere Arena and Paper Presentation currently open their local PDFs; Robo Soccer continues to show a short “coming soon” message until its brochure is supplied. The filenames are documented in `assets/brochures/README.md`.
+Brochure controls are reserved for Robo Race, Robo Soccer, Ampere Arena and Paper Presentation only. All four controls open their local, mobile-optimized PDF files. The filenames are documented in `assets/brochures/README.md`.
 
-Media Team and Snacks Committee cards are ready for student photos. Add their names and image paths to `supportTeamMembers` in `script.js`; the expected folder structure is documented in `assets/images/support/README.md`.
+Media Team and Snacks Committee members are configured in `supportTeamMembers` in `script.js`. Their optimized portraits live in `assets/images/optimized/support/` and use the same card proportions as the main committee.
 
 This is an independently rebuilt front end. It does not contain the original site's private source code, backend, database, admin panel or deployment configuration.

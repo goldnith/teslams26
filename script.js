@@ -27,7 +27,8 @@ const events = [
     venue: "EEE Department Ground",
     team: "Maximum 4",
     date: EVENT_DATE,
-    brochure: "assets/brochures/robo-soccer.pdf"
+    brochure: "assets/brochures/robo-soccer.pdf",
+    brochureReady: true
   },
   {
     name: "Ampere Arena",
@@ -58,7 +59,7 @@ const events = [
     poster: "assets/images/optimized/events/funfinity.webp",
     icon: "F",
     prize: "₹1,500",
-    fee: "Free",
+    fee: "₹50",
     venue: "Third Floor",
     team: "Maximum 4",
     date: EVENT_DATE
@@ -109,32 +110,32 @@ const people = [
   { name: "Naveen", title: "Event Coordinator", group: "Ampere Arena", image: "assets/images/optimized/students/current/naveen.webp" },
   { name: "M.Mohammed Sharuk Khan", title: "Event Coordinator", group: "Paper Presentation", image: "assets/images/optimized/students/current/m-mohammed-sharuk-khan.webp" },
   { name: "Mohamed Sheik Barvees", title: "Event Coordinator", group: "Paper Presentation", image: "assets/images/optimized/students/current/mohamed-sheik-barvees.webp" },
-  { name: "Mohammed Zubair.MU", title: "Event Coordinator", group: "Robo Race", image: "assets/images/optimized/students/current/Mohammed Zubair.MU.webp" },
-  { name: "Umaar faaresh Y", title: "Event Coordinator", group: "Robo Race", image: "assets/images/optimized/students/current/Umaar_faaresh_Y.jpg" },
-  { name: "Ahamed Irfan", title: "Event Coordinator", group: "Robo Race", image: "assets/images/optimized/students/current/Ahamed Irfan.jpeg" },
-  { name: "Abdur Razeeth", title: "Event Coordinator", group: "Fun Finity", image: "assets/images/optimized/students/current/Abdur Razeeth.jpeg" },
-  { name: "Habeeb", title: "Event Coordinator", group: "Fun Finity", image: "assets/images/optimized/students/current/Habeeb.jpeg" },
-  { name: "Bala", title: "Event Coordinator", group: "Cinematrix", image: "assets/images/optimized/students/current/Bala.jpg" },
-  { name: "M.Sulthan", title: "Event Coordinator", group: "Cinematrix", image: "assets/images/optimized/students/current/M.Sulthan.jpg" },
-  { name: "Meera S", title: "Event Coordinator", group: "Cinematrix", image: "assets/images/optimized/students/current/Meera S.jpeg" },
-  { name: "Mohammed Wasim", title: "Event Coordinator", group: "Tooniverse", image: "assets/images/optimized/students/current/Mohammed wasim.jpg" },
-  { name: "Shaiek Fareedh Ahamed", title: "Event Coordinator", group: "Min Twix", image: "assets/images/optimized/students/current/Shaiek Fareedh Ahamed.jpeg" },
-  { name: "Jaaiz ahamed", title: "Event Coordinator", group: "Min Twix", image: "assets/images/optimized/students/current/Jaaiz ahamed.jpeg" }
+  { name: "Mohammed Zubair.MU", title: "Event Coordinator", group: "Robo Race", image: "assets/images/optimized/students/current/mohammed-zubair-mu.webp" },
+  { name: "Umaar Faaresh Y", title: "Event Coordinator", group: "Robo Race", image: "assets/images/optimized/students/current/umaar-faaresh-y.webp" },
+  { name: "Ahamed Irfan", title: "Event Coordinator", group: "Robo Race", image: "assets/images/optimized/students/current/ahamed-irfan.webp" },
+  { name: "Abdur Razeeth", title: "Event Coordinator", group: "Fun Finity", image: "assets/images/optimized/students/current/abdur-razeeth.webp" },
+  { name: "Habeeb", title: "Event Coordinator", group: "Fun Finity", image: "assets/images/optimized/students/current/habeeb.webp" },
+  { name: "Bala", title: "Event Coordinator", group: "Cinematrix", image: "assets/images/optimized/students/current/bala.webp" },
+  { name: "M.Sulthan", title: "Event Coordinator", group: "Cinematrix", image: "assets/images/optimized/students/current/m-sulthan.webp" },
+  { name: "Meera S", title: "Event Coordinator", group: "Tooniverse", image: "assets/images/optimized/students/current/meera-s.webp" },
+  { name: "Mohammed Wasim", title: "Event Coordinator", group: "Tooniverse", image: "assets/images/optimized/students/current/mohammed-wasim.webp" },
+  { name: "Shaiek Fareedh Ahamed", title: "Event Coordinator", group: "Min Twix", image: "assets/images/optimized/students/current/shaiek-fareedh-ahamed.webp" },
+  { name: "Jaaiz Ahamed", title: "Event Coordinator", group: "Min Twix", image: "assets/images/optimized/students/current/jaaiz-ahamed.webp" }
 ];
 
-// Add support-committee students here when their names and photos are ready.
-// Example: { name: "Student Name", role: "Team Member", image: "assets/images/support/media/student-name.webp" }
+// Add future support-committee students here after converting their portraits to lightweight WebP files.
+// Example shape: { name: "Student Name", role: "Team Member", image: supportImagePath }
 const supportTeamMembers = {
   media: [
-    { name: "Rifan Al deen", role: "Media Team", image: "assets/images/support/Rifan Al deen.jpeg" },
-    { name: "Aatif", role: "Media Team", image: "assets/images/support/Aatif.PNG" },
-    { name: "Abdul maalik S", role: "Media Team", image: "assets/images/support/Abdul maalik S.jpeg" },
+    { name: "Rifan Al Deen", role: "Media Team", image: "assets/images/optimized/support/rifan-al-deen.webp" },
+    { name: "Aatif", role: "Media Team", image: "assets/images/optimized/support/aatif.webp" },
+    { name: "Abdul Maalik S", role: "Media Team", image: "assets/images/optimized/support/abdul-maalik-s.webp" }
   ],
   snacks: [
-    { name: "Al Reduvan", role: "Snacks Committee ", image: "assets/images/support/Al Reduvan.jpeg" },
-    { name: "Amaan Khan", role: "Snacks Committee ", image: "assets/images/support/Amaan Khan.jpeg" },
-    { name: "Wasim Akram A", role: "Snacks Committee ", image: "assets/images/support/Wasim Akram A.png" },
-    { name: "Aravindhan SR", role: "Snacks Committee ", image: "assets/images/support/Aravindhan SR.jpeg" },
+    { name: "Al Reduvan", role: "Snacks Committee", image: "assets/images/optimized/support/al-reduvan.webp" },
+    { name: "Amaan Khan", role: "Snacks Committee", image: "assets/images/optimized/support/amaan-khan.webp" },
+    { name: "Wasim Akram A", role: "Snacks Committee", image: "assets/images/optimized/support/wasim-akram-a.webp" },
+    { name: "Aravindhan SR", role: "Snacks Committee", image: "assets/images/optimized/support/aravindhan-sr.webp" }
   ]
 };
 
@@ -179,9 +180,9 @@ let revealObserver = null;
 document.querySelectorAll("[data-support-members]").forEach((grid) => {
   const members = supportTeamMembers[grid.dataset.supportMembers] || [];
   grid.innerHTML = members.length ? members.map((member, index) => `
-    <article class="support-member-card" style="--member-delay:${Math.min(index * 65, 260)}ms">
-      <img src="${member.image}" alt="${member.name}" width="360" height="440" loading="lazy" decoding="async">
-      <div>
+    <article class="support-member-card person-card" style="--member-delay:${Math.min(index * 65, 260)}ms">
+      <img src="${member.image}" alt="${member.name}" width="540" height="720" loading="lazy" decoding="async">
+      <div class="person-info support-member-info">
         <h5 title="${member.name}">${member.name}</h5>
         <p>${member.role || "Team Member"}</p>
       </div>
@@ -256,7 +257,14 @@ const eventCards = [...document.querySelectorAll(".flip-card")];
 function setCardFlipped(card, flipped) {
   card.classList.toggle("flipped", flipped);
   card.setAttribute("aria-expanded", String(flipped));
+  card.querySelector(".flip-front")?.setAttribute("aria-hidden", String(flipped));
+  card.querySelector(".flip-back")?.setAttribute("aria-hidden", String(!flipped));
+  card.querySelectorAll(".event-back-actions a, .event-back-actions button").forEach((action) => {
+    action.tabIndex = flipped ? 0 : -1;
+  });
 }
+
+eventCards.forEach((card) => setCardFlipped(card, false));
 
 eventCards.forEach((card) => {
   card.addEventListener("click", (event) => {
@@ -371,12 +379,19 @@ function positionNavIndicator(link = document.querySelector(".nav-link.active"))
   navIndicator.classList.add("ready");
 }
 
+function syncNavigationAccessibility() {
+  const hidden = window.innerWidth <= 860 && !primaryNav.classList.contains("open");
+  primaryNav.inert = hidden;
+  primaryNav.setAttribute("aria-hidden", String(hidden));
+}
+
 function closeMenu() {
   primaryNav.classList.remove("open");
   menuButton.classList.remove("active");
   menuButton.setAttribute("aria-expanded", "false");
   menuButton.setAttribute("aria-label", "Open navigation");
   document.body.classList.remove("menu-open");
+  syncNavigationAccessibility();
 }
 
 menuButton.addEventListener("click", () => {
@@ -385,7 +400,10 @@ menuButton.addEventListener("click", () => {
   menuButton.setAttribute("aria-expanded", String(open));
   menuButton.setAttribute("aria-label", open ? "Close navigation" : "Open navigation");
   document.body.classList.toggle("menu-open", open);
+  syncNavigationAccessibility();
 });
+
+closeMenu();
 
 primaryNav.querySelectorAll("a").forEach((link) => link.addEventListener("click", closeMenu));
 navLinks.forEach((link) => {
@@ -397,6 +415,7 @@ window.addEventListener("resize", () => {
   if (resizeFrame) return;
   resizeFrame = window.requestAnimationFrame(() => {
     if (window.innerWidth > 860) closeMenu();
+    else syncNavigationAccessibility();
     refreshScrollMetrics();
     positionNavIndicator();
     updateScrollUI();

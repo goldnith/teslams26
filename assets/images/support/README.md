@@ -1,11 +1,6 @@
 # Support committee photos
 
-Create these folders when the student photos are available:
-
-- `media/` for Media Team photos
-- `snacks/` for Snacks Committee photos
-
-Use clear portrait images with a consistent 4:5 crop. WebP is recommended for faster mobile loading.
+Source support-committee photos are converted to lightweight WebP portraits in `../optimized/support/` before being used by the page. Use clear portrait images with a consistent vertical crop.
 
 After copying a photo here, add the member to `supportTeamMembers` in `script.js`:
 
@@ -14,9 +9,9 @@ media: [
   {
     name: "Student Name",
     role: "Team Member",
-    image: "assets/images/support/media/student-name.webp"
+    image: "assets/images/optimized/support/student-name.webp"
   }
 ]
 ```
 
-Use the same format inside `snacks` for Snacks Committee members.
+Use the same format inside `snacks` for Snacks Committee members. Aim for a maximum dimension around 720 pixels so mobile users are not forced to download oversized originals.
