@@ -581,3 +581,31 @@ document.addEventListener("visibilitychange", () => {
 document.addEventListener("pointerdown", (event) => {
   if (primaryNav.classList.contains("open") && !siteHeader.contains(event.target)) closeMenu();
 });
+
+const magicPointer = window.matchMedia("(hover: hover) and (pointer: fine) and (min-width: 861px)");
+
+if (magicPointer.matches && !prefersReducedMotion.matches) {
+  const aurora = document.createElement("div");
+  aurora.className = "magic-aurora";
+  aurora.setAttribute("aria-hidden", "true");
+  document.body.appendChild(aurora);
+
+  let auroraFrame = 0;
+  let auroraX = -500;
+  let auroraY = -500;
+
+  window.addEventListener("pointermove", (event) => {
+    auroraX = event.clientX;
+    auroraY = event.clientY;
+    document.body.classList.add("magic-pointer-active");
+    if (auroraFrame) return;
+    auroraFrame = window.requestAnimationFrame(() => {
+      aurora.style.transform = `translate3d(${auroraX}px, ${auroraY}px, 0) translate(-50%, -50%)`;
+      auroraFrame = 0;
+    });
+  }, { passive: true });
+
+  document.documentElement.addEventListener("mouseleave", () => {
+    document.body.classList.remove("magic-pointer-active");
+  });
+}
