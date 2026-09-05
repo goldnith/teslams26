@@ -8,9 +8,9 @@ const compactEffects = window.matchMedia("(max-width: 860px), (hover: none), (po
 const events = [
   {
     name: "Robo Race",
-    poster: "assets/images/optimized/events/roborace.webp",
+    poster: "assets/images/optimized/events/roborace.png",
     icon: "R",
-    prize: "₹10,000",
+    prize: "₹8,000",
     fee: "₹200",
     venue: "EEE Department Ground",
     team: "Maximum 4",
@@ -20,9 +20,9 @@ const events = [
   },
   {
     name: "Robo Soccer",
-    poster: "assets/images/optimized/events/robosoccer.webp",
+    poster: "assets/images/optimized/events/robosoccer.png",
     icon: "S",
-    prize: "₹10,000",
+    prize: "₹8,000",
     fee: "₹200",
     venue: "EEE Department Ground",
     team: "Maximum 4",
