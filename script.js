@@ -1,6 +1,6 @@
 document.documentElement.classList.add("js");
 
-const REGISTRATION_URL = "https://docs.google.com/forms/d/e/1FAIpQLSdA5VgO-vaGfnEY8VvnAaKJ9NSaCRkGT28ylm56y9irdd6XBw/viewform?usp=header";
+const REGISTRATION_URL = "https://forms.gle/ccJHkJ1XMmoGLAd8A";
 const EVENT_DATE = "12 Sep 2026";
 const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
 const compactEffects = window.matchMedia("(max-width: 860px), (hover: none), (pointer: coarse)");
