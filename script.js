@@ -110,7 +110,7 @@ const people = [
   { name: "Naveen", title: "Event Coordinator", group: "Ampere Arena", image: "assets/images/optimized/students/current/naveen.webp" },
   { name: "M.Mohammed Sharuk Khan", title: "Event Coordinator", group: "Paper Presentation", image: "assets/images/optimized/students/current/m-mohammed-sharuk-khan.webp" },
   { name: "Mohamed Sheik Barvees", title: "Event Coordinator", group: "Paper Presentation", image: "assets/images/optimized/students/current/mohamed-sheik-barvees.webp" },
-  { name: "Mohammed Shaaziya", title: "Event Coordinator", group: "Paper Presentation", image: "assets/images/optimized/students/current/Shaaziya.jpeg" },
+  { name: "Mohammed Shaaziya", title: "Event Coordinator", group: "Paper Presentation", image: "assets/images/optimized/students/current/Shaaziya.webp" },
   { name: "Mohammed Zubair.MU", title: "Event Coordinator", group: "Robo Race", image: "assets/images/optimized/students/current/mohammed-zubair-mu.webp" },
   { name: "Umaar Faaresh Y", title: "Event Coordinator", group: "Robo Race", image: "assets/images/optimized/students/current/umaar-faaresh-y.webp" },
   { name: "Ahamed Irfan", title: "Event Coordinator", group: "Robo Race", image: "assets/images/optimized/students/current/ahamed-irfan.webp" },
@@ -118,7 +118,7 @@ const people = [
   { name: "Habeeb", title: "Event Coordinator", group: "Fun Finity", image: "assets/images/optimized/students/current/habeeb.webp" },
   { name: "Bala", title: "Event Coordinator", group: "Cinematrix", image: "assets/images/optimized/students/current/bala.webp" },
   { name: "M.Sulthan", title: "Event Coordinator", group: "Cinematrix", image: "assets/images/optimized/students/current/m-sulthan.webp" },
-  { name: "Muhammad Ali", title: "Event Coordinator", group: "Cinematrix", image: "assets/images/optimized/students/current/Muhammad Ali.jpeg" },
+  { name: "Muhammad Ali", title: "Event Coordinator", group: "Cinematrix", image: "assets/images/optimized/students/current/Muhammad Ali.webp" },
   { name: "Meera S", title: "Event Coordinator", group: "Tooniverse", image: "assets/images/optimized/students/current/meera-s.webp" },
   { name: "Mohammed Wasim", title: "Event Coordinator", group: "Tooniverse", image: "assets/images/optimized/students/current/mohammed-wasim.webp" },
   { name: "Shaiek Fareedh Ahamed", title: "Event Coordinator", group: "Min Twix", image: "assets/images/optimized/students/current/shaiek-fareedh-ahamed.webp" },
@@ -129,7 +129,7 @@ const people = [
 // Example shape: { name: "Student Name", role: "Team Member", image: supportImagePath }
 const supportTeamMembers = {
   media: [
-    { name: "Rifan Al Deen", role: "Media Team", image: "assets/images/optimized/support/rifan-al-deen.webp" },
+    { name: "Rifan Al Deen", role: "Media Team - Head", image: "assets/images/optimized/support/rifan-al-deen.webp" },
     { name: "Aatif", role: "Media Team", image: "assets/images/optimized/support/aatif.webp" },
     { name: "Abdul Maalik S", role: "Media Team", image: "assets/images/optimized/support/abdul-maalik-s.webp" }
   ],
